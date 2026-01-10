@@ -1,16 +1,21 @@
 /* Silva Serica - Vintage Silk Production Website */
 :root {
-    --silk-gold: #d4af37;
-    --silk-cream: #f4e8d0;
-    --silk-brown: #8b4513;
-    --silk-dark-brown: #5d2f0b;
-    --silk-sepia: #704214;
-    --silk-parchment: #f5e6d3;
-    --silk-ink: #2c1810;
-    --silk-brass: #b8860b;
-    --silk-ivory: #fffff0;
-    --mulberry-green: #4a5d23;
-    --victorian-purple: #663399;
+    --victorian-charcoal: #2c1810;
+    --victorian-velvet: #1a1a1a;
+    --victorian-bronze: #8b4513;
+    --victorian-gold: #d4af37;
+    --victorian-cream: #f5e6d3;
+    --victorian-ivory: #fffff0;
+    --victorian-pearl: #f8f4e3;
+    --victorian-burgundy: #722f37;
+    --victorian-sage: #87a96b;
+    --victorian-rose: #e8b4b8;
+    --victorian-slate: #708090;
+    --victorian-parchment: #f4e8d0;
+    --victorian-ink: #2c1810;
+    --victorian-brass: #b8860b;
+    --victorian-copper: #b87333;
+    --victorian-silver: #c0c0c0;
 }
 
 * {
@@ -21,10 +26,11 @@
 
 body {
     font-family: 'Crimson Text', serif;
-    background: linear-gradient(135deg, var(--silk-cream) 0%, var(--silk-parchment) 100%);
-    color: var(--silk-ink);
+    background: linear-gradient(135deg, var(--victorian-charcoal) 0%, var(--victorian-velvet) 100%);
+    color: var(--victorian-ivory);
     line-height: 1.6;
     overflow-x: hidden;
+    background-attachment: fixed;
 }
 
 .vintage-overlay {
@@ -49,22 +55,23 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(244, 232, 208, 0.95);
+    background: rgba(26, 24, 16, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--silk-gold);
+    border-bottom: 2px solid var(--victorian-bronze);
     z-index: 1000;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 4px 20px rgba(139, 69, 19, 0.2);
 }
 
 .nav-brand {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--silk-dark-brown);
+    font-weight: 700;
+    color: var(--victorian-gold);
     text-align: center;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.1);
+    text-shadow: 3px 3px 6px rgba(212, 175, 55, 0.3);
+    letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -76,12 +83,15 @@ body {
 }
 
 .nav-link {
-    color: var(--silk-brown);
+    color: var(--victorian-ivory);
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
     position: relative;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Crimson Text', serif;
 }
 
 .nav-link::after {
@@ -91,8 +101,9 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--silk-gold);
+    background: var(--victorian-gold);
     transition: width 0.3s ease;
+    border-radius: 1px;
 }
 
 .nav-link:hover::after {
@@ -119,21 +130,32 @@ body {
 }
 
 .vintage-title {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 5rem;
-    font-weight: 400;
-    color: var(--silk-dark-brown);
+    font-weight: 700;
+    color: var(--victorian-ivory);
     margin-bottom: 20px;
-    text-shadow: 3px 3px 6px rgba(139, 69, 19, 0.2);
+    text-shadow: 3px 3px 6px rgba(212, 175, 55, 0.4);
     line-height: 1.2;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--victorian-charcoal) 0%, var(--victorian-velvet) 50%, var(--victorian-bronze) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 20px 40px;
+    border: 3px solid var(--victorian-bronze);
+    border-radius: 8px;
+    display: inline-block;
 }
 
 .vintage-subtitle {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: var(--silk-sepia);
+    color: var(--victorian-pearl);
     margin-bottom: 20px;
     font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.3);
 }
 
 .vintage-description {
@@ -144,8 +166,8 @@ body {
 }
 
 .vintage-btn {
-    background: linear-gradient(135deg, var(--silk-gold), var(--silk-brass));
-    color: var(--silk-cream);
+    background: linear-gradient(135deg, var(--victorian-bronze), var(--victorian-gold));
+    color: var(--victorian-ivory);
     border: none;
     padding: 18px 45px;
     font-size: 1.1rem;
@@ -153,10 +175,13 @@ body {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 6px 25px rgba(139, 69, 19, 0.3);
     position: relative;
     overflow: hidden;
     font-family: 'Crimson Text', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--victorian-bronze);
 }
 
 .vintage-btn::before {
@@ -185,10 +210,11 @@ body {
     left: 30px;
     right: 30px;
     bottom: 30px;
-    border: 3px solid var(--silk-gold);
+    border: 3px solid var(--victorian-bronze);
     pointer-events: none;
-    opacity: 0.3;
+    opacity: 0.4;
     border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
 .silk-thread-animation {
@@ -245,9 +271,19 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     text-align: center;
-    color: var(--silk-dark-brown);
+    color: var(--victorian-ivory);
     margin-bottom: 60px;
     position: relative;
+    text-shadow: 3px 3px 6px rgba(212, 175, 55, 0.4);
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--victorian-charcoal) 0%, var(--victorian-velvet) 50%, var(--victorian-bronze) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 15px 30px;
+    border: 2px solid var(--victorian-bronze);
+    border-radius: 8px;
+    display: inline-block;
 }
 
 .section-title::after {
@@ -258,14 +294,17 @@ body {
     transform: translateX(-50%);
     width: 120px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, var(--silk-gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--victorian-gold), transparent);
+    border-radius: 2px;
 }
 
 /* Vision Section */
 .vision-section {
     padding: 120px 0;
-    background: var(--silk-parchment);
+    background: linear-gradient(135deg, var(--victorian-parchment) 0%, var(--victorian-cream) 100%);
     position: relative;
+    border-bottom: 3px solid var(--victorian-bronze);
+    box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.1);
 }
 
 .vision-content {
@@ -278,14 +317,17 @@ body {
 .vision-statement {
     font-size: 1.4rem;
     line-height: 1.8;
-    color: var(--silk-ink);
+    color: var(--victorian-ivory);
     margin-bottom: 50px;
     font-style: italic;
     text-align: center;
-    padding: 30px;
-    background: rgba(244, 232, 208, 0.5);
+    padding: 40px;
+    background: rgba(26, 24, 16, 0.7);
     border-radius: 15px;
-    border: 2px solid var(--silk-gold);
+    border: 2px solid var(--victorian-bronze);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+    position: relative;
+    font-family: 'Crimson Text', serif;
 }
 
 .vision-highlights {
@@ -297,11 +339,13 @@ body {
 .highlight-item {
     text-align: center;
     padding: 30px;
-    background: var(--silk-cream);
+    background: rgba(26, 24, 16, 0.8);
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
-    border: 2px solid var(--silk-gold);
+    border: 2px solid var(--victorian-bronze);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .highlight-item:hover {
@@ -313,6 +357,8 @@ body {
     font-size: 3rem;
     display: block;
     margin-bottom: 15px;
+    color: var(--victorian-gold);
+    text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.4);
 }
 
 .highlight-item h3 {
@@ -323,12 +369,12 @@ body {
 }
 
 .vintage-frame {
-    border: 4px solid var(--silk-brown);
+    border: 4px solid var(--victorian-bronze);
     border-radius: 15px;
     padding: 20px;
-    background: var(--silk-ivory);
+    background: var(--victorian-cream);
     position: relative;
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -339,7 +385,7 @@ body {
     left: -8px;
     right: -8px;
     bottom: -8px;
-    border: 2px solid var(--silk-gold);
+    border: 2px solid var(--victorian-gold);
     border-radius: 18px;
     pointer-events: none;
 }
