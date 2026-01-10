@@ -1003,19 +1003,351 @@ body {
 }
 
 .herbarium-card:hover {
-    transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(44, 85, 48, 0.15);
     border-color: var(--terra-cotta);
 }
 
-/* Journal Entry Style */
-.journal-entry {
-    background: var(--antique-paper);
-    padding: var(--spacing-lg);
-    border-radius: 4px;
+/* Silk Circle Parlor Community Interface */
+/* Silk Circle Parlor Community Interface */
+.silk-circle-parlor {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, var(--unbleached-silk) 0%, var(--antique-paper) 100%);
     position: relative;
-    border-left: 4px solid var(--terra-cotta);
-    box-shadow: 0 2px 10px rgba(180, 96, 79, 0.1);
+    border-top: 1px solid var(--silk-thread);
+    border-bottom: 1px solid var(--silk-thread);
+    overflow: hidden;
+}
+
+.silk-circle-parlor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><pattern id="parlor-texture" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(44,85,48,0.03)"/></pattern><rect width="200" height="200" fill="url(%23parlor-texture)"/></svg>');
+    pointer-events: none;
+    z-index: 1;
+}
+
+.parlor-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    z-index: 2;
+    padding: 0 var(--spacing-lg);
+}
+
+.parlor-title {
+    font-family: var(--display-font);
+    font-size: 3rem;
+    color: var(--victorian-ink);
+    text-transform: small-caps;
+    letter-spacing: 3px;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 4px rgba(44, 85, 48, 0.1);
+}
+
+.parlor-subtitle {
+    font-family: var(--script-font);
+    font-size: 1.6rem;
+    color: var(--victorian-ink);
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Victorian Parlor Rooms */
+.parlor-rooms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    position: relative;
+    z-index: 2;
+}
+
+.parlor-room {
+    background: var(--antique-paper);
+    border: 2px solid var(--silk-thread);
+    border-radius: 8px;
+    padding: var(--spacing-xl);
+    position: relative;
+    transition: all var(--transition-gentle);
+    overflow: hidden;
+    box-shadow: 
+        0 8px 25px rgba(44, 85, 48, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.parlor-room::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(232, 216, 195, 0.1) 0%, 
+        rgba(44, 85, 48, 0.05) 50%, 
+        rgba(232, 216, 195, 0.1) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.parlor-room:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        0 15px 40px rgba(44, 85, 48, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-color: var(--terra-cotta);
+}
+
+/* Room Decorations */
+.room-decoration {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 60px;
+    height: 60px;
+    background: var(--victorian-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--victorian-ink);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    z-index: 3;
+}
+
+.room-content {
+    position: relative;
+    z-index: 2;
+}
+
+.room-title {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    color: var(--victorian-ink);
+    margin-bottom: var(--spacing-md);
+    text-transform: small-caps;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.room-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--victorian-ink);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Virtual Salon Features */
+.salon-features {
+    list-style: none;
+    margin-top: var(--spacing-lg);
+}
+
+.salon-features li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--silk-thread);
+    font-size: 1rem;
+    color: var(--victorian-ink);
+    opacity: 0.8;
+    transition: all var(--transition-silk);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.salon-features li::before {
+    content: '✦';
+    color: var(--victorian-gold);
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.salon-features li:hover {
+    opacity: 1;
+    color: var(--mulberry-leaf-velvet);
+    padding-left: var(--spacing-sm);
+}
+
+.salon-features li:last-child {
+    border-bottom: none;
+}
+
+/* Join Room Button */
+.join-room-btn {
+    background: linear-gradient(135deg, var(--mulberry-leaf-velvet), var(--terra-cotta));
+    color: var(--unbleached-silk);
+    border: 1px solid var(--silk-thread);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-silk);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.join-room-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left var(--transition-gentle);
+}
+
+.join-room-btn:hover {
+    background: linear-gradient(135deg, var(--terra-cotta), var(--mulberry-leaf-velvet));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.3);
+}
+
+.join-room-btn:hover::before {
+    left: 100%;
+}
+
+/* Connection System */
+.connection-system {
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-xl);
+    background: var(--unbleached-silk);
+    border-radius: 8px;
+    border: 1px solid var(--silk-thread);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.connection-title {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--victorian-ink);
+    margin-bottom: var(--spacing-lg);
+    text-transform: small-caps;
+    letter-spacing: 2px;
+}
+
+.connection-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.connection-feature {
+    text-align: center;
+    padding: var(--spacing-lg);
+}
+
+.connection-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--victorian-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    font-size: 2rem;
+    color: var(--victorian-ink);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    transition: all var(--transition-silk);
+}
+
+.connection-feature:hover .connection-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+}
+
+.connection-feature h4 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    color: var(--victorian-ink);
+    margin-bottom: var(--spacing-sm);
+    text-transform: small-caps;
+    letter-spacing: 1px;
+}
+
+.connection-feature p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--victorian-ink);
+    opacity: 0.8;
+}
+
+/* Victorian Parlor Ambiance */
+.parlor-ambiance {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, 
+        rgba(212, 175, 55, 0.05) 0%, 
+        transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Floating Particles */
+.floating-silk {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--victorian-gold);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatSilk 15s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatSilk {
+    0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+    25% { transform: translateY(-20px) translateX(10px) rotate(90deg); }
+    50% { transform: translateY(-10px) translateX(-10px) rotate(180deg); }
+    75% { transform: translateY(-30px) translateX(5px) rotate(270deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .parlor-rooms {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .parlor-title {
+        font-size: 2rem;
+    }
+    
+    .room-decoration {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .connection-features {
+        grid-template-columns: 1fr;
+    }
 }
 
 .journal-entry::first-letter {
