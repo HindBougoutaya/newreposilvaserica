@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initSilkAnimations();
     initImpactCounters();
     initParallaxEffects();
+    initMarketplace();
+    initAdoptionSteps();
+    initKitCards();
+    initMarketplaceItems();
+    initSellSection();
 });
 
 // Smooth scrolling for navigation links
@@ -470,7 +475,391 @@ function initGalleryLightbox() {
     });
 }
 
-// Initialize gallery lightbox
+// Marketplace functionality
+function initMarketplace() {
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const marketplaceItems = document.querySelectorAll('.marketplace-item');
+    
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active button
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter items
+            const category = this.getAttribute('data-category');
+            marketplaceItems.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.classList.remove('hidden');
+                    setTimeout(() => item.classList.add('show'), 100);
+                } else {
+                    item.classList.add('hidden');
+                    item.classList.remove('show');
+                }
+            });
+        });
+    });
+    
+    // Initialize all items as visible
+    marketplaceItems.forEach((item, index) => {
+        setTimeout(() => item.classList.add('show'), index * 100);
+    });
+}
+
+// Adoption steps animation
+function initAdoptionSteps() {
+    const adoptionSteps = document.querySelectorAll('.adoption-step');
+    
+    const stepsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    adoptionSteps.forEach(step => {
+        stepsObserver.observe(step);
+    });
+}
+
+// Kit card interactions
+function initKitCards() {
+    const kitCards = document.querySelectorAll('.kit-card');
+    
+    kitCards.forEach(card => {
+        const adoptBtn = card.querySelector('.vintage-btn');
+        
+        if (adoptBtn) {
+            adoptBtn.addEventListener('click', function() {
+                const kitName = card.querySelector('h4').textContent;
+                const kitPrice = card.querySelector('.kit-price').textContent;
+                
+                showNotification(`Thank you for your interest in the ${kitName}! Our team will contact you shortly. Price: ${kitPrice}`, 'success');
+                
+                // Add ripple effect
+                const ripple = document.createElement('span');
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.5);
+                    transform: scale(0);
+                    animation: ripple 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                const rect = this.getBoundingClientRect();
+                ripple.style.width = ripple.style.height = '20px';
+                ripple.style.left = '50%';
+                ripple.style.top = '50%';
+                ripple.style.marginLeft = '-10px';
+                ripple.style.marginTop = '-10px';
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        }
+    });
+}
+
+// Marketplace item interactions
+function initMarketplaceItems() {
+    const marketplaceItems = document.querySelectorAll('.marketplace-item');
+    
+    marketplaceItems.forEach(item => {
+        const viewBtn = item.querySelector('.view-btn');
+        
+        if (viewBtn) {
+            viewBtn.addEventListener('click', function() {
+                const itemName = item.querySelector('h4').textContent;
+                const designer = item.querySelector('.designer').textContent;
+                const price = item.querySelector('.item-price').textContent;
+                
+                // Create detailed modal
+                const modal = document.createElement('div');
+                modal.className = 'item-modal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>${itemName}</h3>
+                            <button class="close-modal">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <div class="vintage-frame large-frame">
+                                    <div class="placeholder-content" style="font-size: 5rem;">${item.querySelector('.placeholder-content').textContent}</div>
+                                </div>
+                            </div>
+                            <div class="modal-details">
+                                <p class="designer-info">${designer}</p>
+                                <p class="price-info">${price}</p>
+                                <p class="description">Exquisite Victorian-inspired silk creation, handcrafted with care and attention to detail. Perfect for special occasions or adding elegance to your everyday style.</p>
+                                <div class="modal-actions">
+                                    <button class="vintage-btn purchase-btn">Purchase</button>
+                                    <button class="vintage-btn inquiry-btn">Make Inquiry</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                // Add modal styles
+                const modalStyle = document.createElement('style');
+                modalStyle.textContent = `
+                    .item-modal {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(44, 24, 16, 0.9);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 2000;
+                        opacity: 0;
+                        animation: fadeIn 0.3s ease forwards;
+                    }
+                    
+                    .modal-content {
+                        background: var(--silk-cream);
+                        border-radius: 20px;
+                        border: 3px solid var(--silk-gold);
+                        max-width: 800px;
+                        max-height: 90vh;
+                        overflow-y: auto;
+                        margin: 20px;
+                    }
+                    
+                    .modal-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 30px;
+                        border-bottom: 1px solid var(--silk-gold);
+                    }
+                    
+                    .modal-header h3 {
+                        font-family: 'Playfair Display', serif;
+                        font-size: 2rem;
+                        color: var(--silk-dark-brown);
+                    }
+                    
+                    .close-modal {
+                        background: none;
+                        border: none;
+                        font-size: 2rem;
+                        color: var(--silk-brown);
+                        cursor: pointer;
+                        transition: color 0.3s ease;
+                    }
+                    
+                    .close-modal:hover {
+                        color: var(--silk-gold);
+                    }
+                    
+                    .modal-body {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 40px;
+                        padding: 30px;
+                    }
+                    
+                    .modal-image .vintage-frame {
+                        width: 250px;
+                        height: 250px;
+                        margin: 0 auto;
+                    }
+                    
+                    .designer-info {
+                        font-style: italic;
+                        color: var(--silk-sepia);
+                        margin-bottom: 10px;
+                    }
+                    
+                    .price-info {
+                        font-family: 'Playfair Display', serif;
+                        font-size: 1.8rem;
+                        color: var(--silk-gold);
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
+                    
+                    .description {
+                        line-height: 1.8;
+                        color: var(--silk-ink);
+                        margin-bottom: 30px;
+                    }
+                    
+                    .modal-actions {
+                        display: flex;
+                        gap: 20px;
+                    }
+                    
+                    @keyframes ripple {
+                        to {
+                            transform: scale(4);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                
+                if (!document.querySelector('style[data-item-modal]')) {
+                    modalStyle.setAttribute('data-item-modal', 'true');
+                    document.head.appendChild(modalStyle);
+                }
+                
+                document.body.appendChild(modal);
+                
+                // Close modal functionality
+                const closeBtn = modal.querySelector('.close-modal');
+                closeBtn.addEventListener('click', () => {
+                    modal.style.animation = 'fadeOut 0.3s ease forwards';
+                    setTimeout(() => modal.remove(), 300);
+                });
+                
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeBtn.click();
+                    }
+                });
+                
+                // Purchase and inquiry buttons
+                const purchaseBtn = modal.querySelector('.purchase-btn');
+                const inquiryBtn = modal.querySelector('.inquiry-btn');
+                
+                purchaseBtn.addEventListener('click', () => {
+                    showNotification(`Purchase initiated for ${itemName}. You will be redirected to payment.`, 'success');
+                    setTimeout(() => closeBtn.click(), 2000);
+                });
+                
+                inquiryBtn.addEventListener('click', () => {
+                    showNotification(`Inquiry sent for ${itemName}. The designer will contact you soon.`, 'success');
+                    setTimeout(() => closeBtn.click(), 2000);
+                });
+            });
+        }
+    });
+}
+
+// Sell section functionality
+function initSellSection() {
+    const sellBtn = document.querySelector('.sell-section .vintage-btn');
+    
+    if (sellBtn) {
+        sellBtn.addEventListener('click', function() {
+            showNotification('Welcome to our seller community! Please register your design studio to start selling.', 'success');
+            
+            // Create registration form modal
+            const modal = document.createElement('div');
+            modal.className = 'seller-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Register Your Design Studio</h3>
+                        <button class="close-modal">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="seller-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Studio Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Tell us about your Victorian modern designs..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="vintage-btn">Submit Application</button>
+                        </form>
+                    </div>
+                </div>
+            `;
+            
+            // Add styles for seller modal
+            const sellerModalStyle = document.createElement('style');
+            sellerModalStyle.textContent = `
+                .seller-modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(44, 24, 16, 0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2000;
+                    opacity: 0;
+                    animation: fadeIn 0.3s ease forwards;
+                }
+                
+                .seller-modal .modal-content {
+                    background: var(--silk-cream);
+                    border-radius: 20px;
+                    border: 3px solid var(--silk-gold);
+                    max-width: 500px;
+                    margin: 20px;
+                }
+                
+                .seller-modal .modal-header {
+                    padding: 30px;
+                    border-bottom: 1px solid var(--silk-gold);
+                    text-align: center;
+                }
+                
+                .seller-modal .modal-body {
+                    padding: 30px;
+                }
+                
+                .seller-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            `;
+            
+            if (!document.querySelector('style[data-seller-modal]')) {
+                sellerModalStyle.setAttribute('data-seller-modal', 'true');
+                document.head.appendChild(sellerModalStyle);
+            }
+            
+            document.body.appendChild(modal);
+            
+            // Close modal functionality
+            const closeBtn = modal.querySelector('.close-modal');
+            closeBtn.addEventListener('click', () => {
+                modal.style.animation = 'fadeOut 0.3s ease forwards';
+                setTimeout(() => modal.remove(), 300);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeBtn.click();
+                }
+            });
+            
+            // Form submission
+            const form = modal.querySelector('.seller-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                showNotification('Application submitted successfully! We will review your studio within 48 hours.', 'success');
+                setTimeout(() => closeBtn.click(), 2000);
+            });
+        });
+    }
+}
+
+
 initGalleryLightbox();
 
 // Add fadeOut animation
