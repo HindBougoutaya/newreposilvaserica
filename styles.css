@@ -1350,14 +1350,395 @@ body {
     }
 }
 
-.journal-entry::first-letter {
+/* Victorian iPhone App Interface */
+.victorian-app-container {
+    width: 375px;
+    max-width: 100%;
+    min-height: 667px;
+    margin: 40px auto;
+    background: rgba(248, 245, 230, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.victorian-app-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=3000&h=2000&fit=crop&crop=center&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* Victorian Status Bar */
+.victorian-status-bar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 375px;
+    max-width: 100%;
+    height: 60px;
+    background: rgba(240, 234, 214, 0.9);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 24px 24px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.status-logo {
     font-family: var(--script-font);
-    font-size: 3rem;
-    color: var(--terra-cotta);
-    float: left;
-    line-height: 0.8;
-    margin-right: var(--spacing-xs);
-    margin-top: var(--spacing-xs);
+    font-size: 1.2rem;
+    color: var(--victorian-ink);
+    font-weight: 700;
+}
+
+.status-level {
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    color: var(--victorian-gold);
+    text-transform: small-caps;
+    letter-spacing: 1px;
+}
+
+.status-progress {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--victorian-gold);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.status-progress::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--victorian-gold) 0deg 270deg, transparent 270deg);
+    animation: progressRotate 2s linear infinite;
+}
+
+@keyframes progressRotate {
+    to { transform: rotate(360deg); }
+}
+
+/* Victorian Tab Bar */
+.victorian-tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 375px;
+    max-width: 100%;
+    height: 70px;
+    background: rgba(44, 85, 48, 0.95);
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 0 0 24px 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: all var(--transition-silk);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.tab-item:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.tab-item.active {
+    background: rgba(212, 175, 55, 0.2);
+}
+
+.tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: var(--victorian-gold);
+    border-radius: 1px;
+    animation: goldGlow 2s ease-in-out infinite;
+}
+
+@keyframes goldGlow {
+    0%, 100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
+    50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.8); }
+}
+
+.tab-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all var(--transition-silk);
+}
+
+.tab-item.active .tab-icon {
+    color: var(--victorian-gold);
+}
+
+.tab-label {
+    font-family: var(--body-font);
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tab-item.active .tab-label {
+    color: var(--victorian-gold);
+}
+
+/* Victorian Photo Album Cards */
+.victorian-card {
+    background: rgba(248, 245, 230, 0.85);
+    border: 1px solid #E8D8C3;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin: 16px;
+    transition: all var(--transition-silk);
+    position: relative;
+    overflow: hidden;
+}
+
+.victorian-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><pattern id="card-texture" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="rgba(232,216,195,0.05)"/></pattern><rect width="100" height="100" fill="url(%23card-texture)"/></svg>');
+    pointer-events: none;
+    z-index: 1;
+}
+
+.victorian-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Daily Silk Mantra Card */
+.daily-mantra-card {
+    background: linear-gradient(135deg, var(--victorian-gold), var(--victorian-brass));
+    border: 2px solid var(--victorian-gold);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.daily-mantra-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><pattern id="mantra-texture" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern><rect width="200" height="200" fill="url(%23mantra-texture)"/></svg>');
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mantra-text {
+    font-family: var(--script-font);
+    font-size: 1.4rem;
+    color: var(--victorian-ink);
+    font-style: italic;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.mantra-date {
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    color: var(--victorian-ink);
+    text-transform: small-caps;
+    letter-spacing: 2px;
+    margin-top: var(--spacing-md);
+    opacity: 0.8;
+    position: relative;
+    z-index: 2;
+}
+
+/* Silk Garden Widget */
+.silk-garden-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.garden-progress {
+    width: 120px;
+    height: 120px;
+    border: 3px solid var(--victorian-gold);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(248, 245, 230, 0.9);
+}
+
+.garden-progress::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 3px solid var(--silk-thread);
+    border-radius: 50%;
+    border-top-color: var(--victorian-gold);
+    transform: rotate(45deg);
+    animation: progressSpin 3s linear infinite;
+}
+
+@keyframes progressSpin {
+    to { transform: rotate(405deg); }
+}
+
+.garden-stats {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.garden-number {
+    font-family: var(--display-font);
+    font-size: 2rem;
+    color: var(--victorian-ink);
+    font-weight: 700;
+}
+
+.garden-label {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    color: var(--victorian-ink);
+    opacity: 0.8;
+}
+
+.next-task {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    color: var(--mulberry-leaf-velvet);
+    text-align: center;
+    margin: var(--spacing-sm) 0;
+}
+
+.quick-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quick-action-btn {
+    background: var(--mulberry-leaf-velvet);
+    color: var(--unbleached-silk);
+    border: 1px solid var(--silk-thread);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 20px;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all var(--transition-silk);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quick-action-btn:hover {
+    background: var(--terra-cotta);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
+}
+
+/* App Content Area */
+.app-content {
+    padding: 80px 20px 90px;
+    min-height: 667px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Masonry Grid Layout */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .victorian-app-container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    
+    .victorian-status-bar {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .victorian-tab-bar {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .app-content {
+        padding: 80px 16px 90px;
+    }
+    
+    .masonry-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .silk-thread-animation {
@@ -1404,12 +1785,9 @@ body {
 
 @keyframes fadeIn {
     to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
-/* Section Styles */
 .section-title {
     font-family: var(--heading-font);
     font-size: 3rem;
