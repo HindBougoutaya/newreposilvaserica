@@ -4115,4 +4115,1236 @@
         });
     </script>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva Serica - From Mulberry Leaves to Golden Dreams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400&family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wood-dark: #8B4513;
+            --wood-medium: #A0522D;
+            --wood-light: #DEB887;
+            --forest-green: #2E4F2E;
+            --sage-green: #9CAF88;
+            --moss-green: #8A9A5B;
+            --cream: #FDF5E6;
+            --lace: #FFF8F0;
+            --ivory: #FFFFF0;
+            --gold: #D4AF37;
+            --vintage-brown: #5D4037;
+            --antique-white: #FAEBD7;
+            --parchment: #F5F5DC;
+            --vintage-gold: #B8860B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            color: var(--vintage-brown);
+            line-height: 1.8;
+            position: relative;
+            background-color: var(--antique-white);
+            min-height: 100vh;
+        }
+
+        /* VINTAGE PAINTING BACKGROUND - Now as main font/background */
+        .vintage-painting-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1575224300307-3c7a1b5e302c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.15;
+            z-index: -1;
+            filter: sepia(0.3) contrast(0.9);
+        }
+
+        /* VINTAGE FRAME OVERLAY */
+        .vintage-frame-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 30px solid transparent;
+            border-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L100,0 L100,100 L0,100 Z' fill='none' stroke='%238B4513' stroke-width='8' stroke-dasharray='10,5'/%3E%3C/svg%3E") 30 stretch;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* VINTAGE TEXTURE OVERLAY */
+        .vintage-texture {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h180v180H10z' fill='none' stroke='%235D4037' stroke-width='0.5' stroke-opacity='0.1'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* MAIN CONTAINER - CENTERED LAYOUT */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HEADER - VINTAGE STYLE */
+        .vintage-header {
+            text-align: center;
+            padding: 80px 0 40px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .vintage-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            color: var(--forest-green);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-title::before, .main-title::after {
+            content: "✦";
+            color: var(--gold);
+            margin: 0 20px;
+            font-size: 2rem;
+        }
+
+        .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--wood-medium);
+            font-style: italic;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--sage-green);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* NAVIGATION - VINTAGE STYLE */
+        .vintage-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .vintage-nav::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--wood-light), transparent);
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--parchment);
+            border: 2px solid var(--wood-light);
+            border-radius: 30px;
+            color: var(--forest-green);
+            text-decoration: none;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link:hover {
+            background: var(--wood-light);
+            color: var(--ivory);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-link.active {
+            background: var(--forest-green);
+            color: var(--ivory);
+            border-color: var(--forest-green);
+        }
+
+        .nav-link i {
+            margin-right: 8px;
+        }
+
+        /* MAIN CONTENT AREA - CENTERED GRID LAYOUT */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            margin: 40px 0 80px;
+        }
+
+        /* SECTIONS - VINTAGE CARDS */
+        .vintage-section {
+            background: var(--parchment);
+            border: 2px solid var(--wood-light);
+            border-radius: 15px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .vintage-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--forest-green);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--wood-medium), var(--gold), var(--wood-medium));
+            border-radius: 3px;
+        }
+
+        /* ARTICLES GRID - FUNCTIONAL & BEAUTIFUL */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .article-card {
+            background: var(--ivory);
+            border: 1px solid var(--wood-light);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            border-color: var(--gold);
+        }
+
+        .article-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .article-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(139, 69, 19, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .article-card:hover .article-overlay {
+            opacity: 1;
+        }
+
+        .read-btn {
+            background: var(--gold);
+            color: var(--ivory);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .read-btn:hover {
+            background: var(--forest-green);
+            transform: scale(1.05);
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--forest-green);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: var(--vintage-brown);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--wood-light);
+        }
+
+        .article-category {
+            background: var(--sage-green);
+            color: var(--ivory);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        .article-date {
+            color: var(--wood-medium);
+            font-size: 0.9rem;
+        }
+
+        /* IMPACT SECTION - CIRCULAR DISPLAY */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .impact-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--ivory);
+            border: 2px solid var(--wood-light);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .impact-item:hover {
+            transform: scale(1.05);
+            border-color: var(--gold);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .impact-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .impact-label {
+            font-size: 1rem;
+            color: var(--forest-green);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* PROCESS TIMELINE - VINTAGE STYLE */
+        .process-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .process-timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--wood-medium), transparent);
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .process-step:nth-child(odd) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .step-circle {
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ivory);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .step-content {
+            width: 45%;
+            background: var(--ivory);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--wood-light);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .step-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--forest-green);
+            margin-bottom: 10px;
+        }
+
+        /* ADOPTION SECTION - INTERACTIVE */
+        .adoption-kits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .kit-card {
+            background: var(--ivory);
+            border: 2px solid var(--wood-light);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kit-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .kit-card.featured::before {
+            content: "★ MOST POPULAR";
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--gold);
+            color: var(--ivory);
+            padding: 5px 30px;
+            font-size: 0.9rem;
+            transform: rotate(45deg);
+            width: 150px;
+            text-align: center;
+        }
+
+        .kit-icon {
+            font-size: 3rem;
+            color: var(--wood-medium);
+            margin-bottom: 20px;
+        }
+
+        .kit-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--forest-green);
+            margin-bottom: 10px;
+        }
+
+        .kit-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 20px 0;
+            font-weight: 700;
+        }
+
+        .adopt-btn {
+            background: var(--forest-green);
+            color: var(--ivory);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .adopt-btn:hover {
+            background: var(--wood-medium);
+            transform: scale(1.05);
+        }
+
+        /* VINTAGE QUOTE */
+        .vintage-quote {
+            background: linear-gradient(135deg, var(--wood-light), var(--parchment));
+            border-left: 5px solid var(--gold);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 0 15px 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vintage-quote::before {
+            content: "❝";
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 6rem;
+            color: var(--gold);
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .quote-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--forest-green);
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .quote-author {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--wood-medium);
+            text-align: right;
+            font-style: italic;
+        }
+
+        /* FOOTER - VINTAGE STYLE */
+        .vintage-footer {
+            background: linear-gradient(to bottom, var(--wood-dark), var(--forest-green));
+            color: var(--ivory);
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .vintage-footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-links a {
+            color: var(--sage-green);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            padding-left: 10px;
+            border-left: 2px solid transparent;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            border-left-color: var(--gold);
+            padding-left: 15px;
+        }
+
+        .contact-info {
+            color: var(--sage-green);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-info i {
+            color: var(--gold);
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--sage-green);
+            font-size: 0.9rem;
+        }
+
+        /* LACE BORDERS */
+        .lace-border-top {
+            position: relative;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='20' viewBox='0 0 120 20'%3E%3Cpath d='M0,10 Q30,5 60,10 T120,10' stroke='%239CAF88' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 120px 20px;
+            margin: 40px 0;
+        }
+
+        .lace-border-bottom {
+            position: relative;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='20' viewBox='0 0 120 20'%3E%3Cpath d='M0,10 Q30,20 60,10 T120,10' stroke='%239CAF88' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 120px 20px;
+            margin: 40px 0;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 3.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.4rem;
+            }
+            
+            .vintage-nav {
+                gap: 15px;
+            }
+            
+            .nav-link {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .impact-item {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .impact-number {
+                font-size: 2rem;
+            }
+            
+            .process-timeline::before {
+                left: 30px;
+            }
+            
+            .process-step {
+                flex-direction: row !important;
+                text-align: left !important;
+            }
+            
+            .step-circle {
+                left: 30px;
+            }
+            
+            .step-content {
+                width: calc(100% - 90px);
+                margin-left: 90px;
+            }
+            
+            .vintage-quote {
+                padding: 30px 20px;
+            }
+            
+            .quote-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .vintage-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Vintage Painting Background -->
+    <div class="vintage-painting-bg"></div>
+    <div class="vintage-frame-overlay"></div>
+    <div class="vintage-texture"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header -->
+        <header class="vintage-header">
+            <h1 class="main-title">Silva Serica</h1>
+            <p class="tagline">From Mulberry Leaves to Golden Dreams</p>
+            <p class="subtitle">Empowering rural communities through the ancient art of silk production</p>
+        </header>
+
+        <!-- Lace Border -->
+        <div class="lace-border-top"></div>
+
+        <!-- Navigation -->
+        <nav class="vintage-nav">
+            <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+            <a href="#vision" class="nav-link"><i class="fas fa-eye"></i> Vision</a>
+            <a href="#articles" class="nav-link"><i class="fas fa-newspaper"></i> Articles</a>
+            <a href="#impact" class="nav-link"><i class="fas fa-chart-line"></i> Impact</a>
+            <a href="#process" class="nav-link"><i class="fas fa-spinner"></i> Process</a>
+            <a href="#adoption" class="nav-link"><i class="fas fa-bug"></i> Adoption</a>
+            <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <!-- Lace Border -->
+        <div class="lace-border-bottom"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Vision Section -->
+            <section id="vision" class="vintage-section">
+                <h2 class="section-title">Our Vision</h2>
+                <div class="vintage-quote">
+                    <p class="quote-text">We seek to uplift a rural, nature-bound community, where families weave the silk they raise into golden garments, gaining financial independence, dignity, and pride.</p>
+                    <p class="quote-author">- Hind Bougoutaya, Founder</p>
+                </div>
+                <p style="text-align: center; font-size: 1.2rem; line-height: 1.8; color: var(--forest-green);">
+                    Turning simple hands and humble mulberry leaves into a legacy of beauty, self-reliance, and hope.
+                </p>
+            </section>
+
+            <!-- Articles Section -->
+            <section id="articles" class="vintage-section">
+                <h2 class="section-title">Featured Articles</h2>
+                <p style="text-align: center; margin-bottom: 30px; color: var(--wood-medium); font-size: 1.1rem;">
+                    Click on any article to read the complete guide
+                </p>
+                
+                <div class="articles-grid">
+                    <!-- Article 1 -->
+                    <div class="article-card" onclick="openArticle('mulberry')">
+                        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1590137876181-4d4f46f5da43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="article-overlay">
+                                <button class="read-btn">Read Full Article</button>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Mulberry Cultivation Guide</h3>
+                            <p class="article-excerpt">Learn how to plant, grow, and care for mulberry trees to provide sustainable food for your silkworms. Complete guide with seasonal tips and organic methods.</p>
+                            <div class="article-meta">
+                                <span class="article-category">Cultivation</span>
+                                <span class="article-date">15 min read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="article-card" onclick="openArticle('silkworm')">
+                        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="article-overlay">
+                                <button class="read-btn">Read Full Article</button>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Silkworm Care & Adoption</h3>
+                            <p class="article-excerpt">Everything you need to know about raising healthy silkworms, from eggs to cocoon production. Includes feeding schedules and health management.</p>
+                            <div class="article-meta">
+                                <span class="article-category">Care Guide</span>
+                                <span class="article-date">20 min read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="article-card" onclick="openArticle('silk')">
+                        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1581165801306-7ba8a5d7d2c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="article-overlay">
+                                <button class="read-btn">Read Full Article</button>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Silk Processing Techniques</h3>
+                            <p class="article-excerpt">Traditional and modern methods for processing silk cocoons into luxurious, usable thread. Includes natural dyeing with local plants.</p>
+                            <div class="article-meta">
+                                <span class="article-category">Processing</span>
+                                <span class="article-date">25 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact Section -->
+            <section id="impact" class="vintage-section">
+                <h2 class="section-title">Our Impact</h2>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-number">7,500</div>
+                        <div class="impact-label">Lives Impacted</div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-number">500</div>
+                        <div class="impact-label">Mulberry Trees</div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-number">85%</div>
+                        <div class="impact-label">Survival Rate</div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-number">75%</div>
+                        <div class="impact-label">Income Generation</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section id="process" class="vintage-section">
+                <h2 class="section-title">The Silk Process</h2>
+                <div class="process-timeline">
+                    <!-- Step 1 -->
+                    <div class="process-step">
+                        <div class="step-circle">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Mulberry Cultivation</h3>
+                            <p>Families plant and nurture mulberry trees, creating sustainable food sources for silkworms while improving air quality.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="process-step">
+                        <div class="step-circle">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Silkworm Care</h3>
+                            <p>Daily feeding and care of silkworms, teaching patience, responsibility, and unconditional love for animals.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="process-step">
+                        <div class="step-circle">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Silk Harvesting</h3>
+                            <p>Carefully harvesting silk threads while maintaining ethical practices and respect for nature's cycles.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="process-step">
+                        <div class="step-circle">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Weaving & Design</h3>
+                            <p>Transforming raw silk into beautiful Victorian-inspired garments with modern styling and elegance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Adoption Section -->
+            <section id="adoption" class="vintage-section">
+                <h2 class="section-title">Adopt Your Silkworm Family</h2>
+                <p style="text-align: center; margin-bottom: 30px; color: var(--wood-medium); font-size: 1.1rem;">
+                    Join the silk revolution and start your journey today
+                </p>
+                
+                <div class="adoption-kits">
+                    <!-- Beginner Kit -->
+                    <div class="kit-card">
+                        <div class="kit-icon">🥚</div>
+                        <h3 class="kit-title">Beginner's Kit</h3>
+                        <p>Perfect for families new to silkworm care</p>
+                        <ul style="text-align: left; margin: 20px 0; padding-left: 20px; color: var(--vintage-brown);">
+                            <li>50 silkworm eggs</li>
+                            <li>Feeding container</li>
+                            <li>Complete care guide</li>
+                            <li>Mulberry seeds</li>
+                        </ul>
+                        <div class="kit-price">299 MAD</div>
+                        <button class="adopt-btn" onclick="adoptKit('beginner')">Adopt Now</button>
+                    </div>
+                    
+                    <!-- Family Kit -->
+                    <div class="kit-card featured">
+                        <div class="kit-icon">🦋</div>
+                        <h3 class="kit-title">Family Producer Kit</h3>
+                        <p>Everything needed for household silk production</p>
+                        <ul style="text-align: left; margin: 20px 0; padding-left: 20px; color: var(--vintage-brown);">
+                            <li>100 silkworm eggs</li>
+                            <li>2 rearing containers</li>
+                            <li>Advanced care guide</li>
+                            <li>Mulberry seedlings</li>
+                            <li>Basic spinning tools</li>
+                        </ul>
+                        <div class="kit-price">599 MAD</div>
+                        <button class="adopt-btn" onclick="adoptKit('family')">Adopt Now</button>
+                    </div>
+                    
+                    <!-- Artisan Kit -->
+                    <div class="kit-card">
+                        <div class="kit-icon">🎨</div>
+                        <h3 class="kit-title">Artisan's Dream Kit</h3>
+                        <p>For serious silk enthusiasts and creators</p>
+                        <ul style="text-align: left; margin: 20px 0; padding-left: 20px; color: var(--vintage-brown);">
+                            <li>200 silkworm eggs</li>
+                            <li>Professional rearing setup</li>
+                            <li>Masterclass access</li>
+                            <li>Mature mulberry trees</li>
+                            <li>Complete weaving kit</li>
+                        </ul>
+                        <div class="kit-price">1,299 MAD</div>
+                        <button class="adopt-btn" onclick="adoptKit('artisan')">Adopt Now</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="vintage-footer">
+        <div class="main-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Silva Serica</h3>
+                    <p style="color: var(--sage-green); line-height: 1.6;">
+                        From Mulberry Leaves to Golden Dreams<br>
+                        Empowering communities through sustainable silk production
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#vision">Our Vision</a>
+                        <a href="#articles">Articles</a>
+                        <a href="#impact">Impact</a>
+                        <a href="#process">Process</a>
+                        <a href="#adoption">Adoption</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> hindbougoutaya@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +212 645 792 251</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Tamesna, Morocco</p>
+                        <p><i class="fas fa-university"></i> University Mohammed VI Polytechnic</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Silva Serica. A Millennium Fellowship Project by Hind Bougoutaya</p>
+                <p>Sustainable Development Goal 11: Sustainable Cities and Communities</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Article data - REAL CONTENT
+        const articles = {
+            mulberry: {
+                title: "Complete Mulberry Cultivation Guide",
+                content: `
+                    <div class="article-full">
+                        <h2>Complete Mulberry Cultivation Guide</h2>
+                        <p class="article-meta">Cultivation • 15 min read</p>
+                        
+                        <h3>Introduction to Mulberry Trees</h3>
+                        <p>Mulberry trees (Morus spp.) are fast-growing, deciduous trees that produce the essential food for silkworms. They're hardy, drought-resistant once established, and can thrive in various soil conditions.</p>
+                        
+                        <h3>Planting Guidelines</h3>
+                        <ul>
+                            <li><strong>Climate:</strong> Optimal growth between 24-30°C</li>
+                            <li><strong>Soil:</strong> Well-drained soil with pH 6.0-7.0</li>
+                            <li><strong>Spacing:</strong> 3-4 meters apart for optimal growth</li>
+                            <li><strong>Planting Time:</strong> Early spring or start of rainy season</li>
+                        </ul>
+                        
+                        <h3>Care and Maintenance</h3>
+                        <p><strong>Watering:</strong> First year: Water every 3-4 days during dry periods. Established trees: Deep watering every 10-14 days.</p>
+                        <p><strong>Fertilization:</strong> Apply balanced fertilizer in spring and nitrogen-rich fertilizer after each harvest.</p>
+                        
+                        <h3>Harvesting Techniques</h3>
+                        <ul>
+                            <li><strong>First harvest:</strong> 6-8 months after planting</li>
+                            <li><strong>Peak season:</strong> Spring and summer months</li>
+                            <li><strong>Best time:</strong> Early morning when leaves are crisp</li>
+                            <li><strong>Frequency:</strong> Every 45-60 days during growing season</li>
+                        </ul>
+                        
+                        <h3>Yield Expectations</h3>
+                        <p>Year 1: 2-3 kg leaves (500-750 worms)<br>
+                        Year 2: 8-12 kg leaves (2,000-3,000 worms)<br>
+                        Year 3+: 15-25 kg leaves (4,000-6,000 worms)</p>
+                    </div>
+                `,
+                image: 'https://images.unsplash.com/photo-1590137876181-4d4f46f5da43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            },
+            silkworm: {
+                title: "Silkworm Care & Adoption Guide",
+                content: `
+                    <div class="article-full">
+                        <h2>Silkworm Care & Adoption Guide</h2>
+                        <p class="article-meta">Care Guide • 20 min read</p>
+                        
+                        <h3>Introduction to Silkworm Farming</h3>
+                        <p>The silkworm (Bombyx mori) has been domesticated for over 5,000 years. These remarkable creatures transform mulberry leaves into luxurious silk.</p>
+                        
+                        <h3>Getting Started</h3>
+                        <ul>
+                            <li><strong>Rearing trays:</strong> Shallow boxes with ventilation</li>
+                            <li><strong>Temperature:</strong> 24-28°C (75-82°F)</li>
+                            <li><strong>Humidity:</strong> 70-80% for young worms, 60-70% for mature</li>
+                            <li><strong>Light:</strong> Indirect natural light</li>
+                        </ul>
+                        
+                        <h3>Lifecycle Management</h3>
+                        <p><strong>Eggs (10-14 days):</strong> Incubate at 25°C with 80-85% humidity</p>
+                        <p><strong>Larvae - 5 Instars (25-28 days):</strong> Feed tender leaves for young worms, mature leaves for older ones</p>
+                        <p><strong>Cocoon Formation (3-4 days):</strong> Provide spinning structures</p>
+                        <p><strong>Pupation (14-18 days):</strong> Harvest cocoons 7-8 days after completion</p>
+                        
+                        <h3>Feeding Schedule</h3>
+                        <ul>
+                            <li><strong>1st Instar:</strong> 4-5 feeds/day, every 4-5 hours</li>
+                            <li><strong>2nd-3rd Instar:</strong> 3-4 feeds/day, every 6 hours</li>
+                            <li><strong>4th-5th Instar:</strong> 3-4 feeds/day, free feeding</li>
+                        </ul>
+                        
+                        <h3>Health Management</h3>
+                        <p>Prevent diseases by maintaining strict hygiene, providing fresh leaves, and controlling temperature/humidity precisely.</p>
+                    </div>
+                `,
+                image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            },
+            silk: {
+                title: "Silk Processing Techniques Guide",
+                content: `
+                    <div class="article-full">
+                        <h2>Silk Processing Techniques Guide</h2>
+                        <p class="article-meta">Processing • 25 min read</p>
+                        
+                        <h3>Introduction to Silk Processing</h3>
+                        <p>Silk processing transforms cocoons into usable thread through harvesting, stifling, reeling, twisting, and dyeing.</p>
+                        
+                        <h3>Cocoon Harvest & Preparation</h3>
+                        <ul>
+                            <li><strong>Harvest time:</strong> 7-8 days after cocoon completion</li>
+                            <li><strong>Sorting:</strong> Grade by shape, firmness, and color</li>
+                            <li><strong>Stifling:</strong> Steam for 15-20 minutes at 100°C</li>
+                        </ul>
+                        
+                        <h3>Traditional Reeling Methods</h3>
+                        <ol>
+                            <li>Soak cocoons in hot water (80°C) for 10-15 minutes</li>
+                            <li>Brush gently to find filament ends</li>
+                            <li>Attach 5-10 filament ends together</li>
+                            <li>Wind combined filaments onto reel slowly</li>
+                            <li>Add new cocoons as needed to maintain continuity</li>
+                        </ol>
+                        
+                        <h3>Natural Dyeing Techniques</h3>
+                        <ul>
+                            <li><strong>Yellow/Gold:</strong> Turmeric, onion skins (Alum mordant)</li>
+                            <li><strong>Red/Pink:</strong> Madder root, pomegranate (Alum/Tin)</li>
+                            <li><strong>Blue:</strong> Indigo, woad (No mordant needed)</li>
+                            <li><strong>Brown:</strong> Walnut hulls, tea (Iron mordant)</li>
+                            <li><strong>Green:</strong> Nettle, spinach (Copper mordant)</li>
+                        </ul>
+                        
+                        <h3>Community Processing Center</h3>
+                        <p>Our Silva Serica project establishes community processing centers where families can share equipment and knowledge for collective silk production.</p>
+                        
+                        <h3>Economic Benefits</h3>
+                        <ul>
+                            <li>Raw Silk: 6-8 kg cocoons → 1 kg silk ($50-80 value)</li>
+                            <li>Dyed Silk: 1 kg raw silk → 1 kg dyed silk ($80-120 value)</li>
+                            <li>Handwoven Fabric: 200g silk → 1m² fabric ($40-60 value)</li>
+                        </ul>
+                    </div>
+                `,
+                image: 'https://images.unsplash.com/photo-1581165801306-7ba8a5d7d2c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            }
+        };
+
+        // Open article modal
+        function openArticle(articleId) {
+            const article = articles[articleId];
+            if (!article) return;
+            
+            const modalHTML = `
+                <div class="article-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; overflow-y: auto; padding: 20px;">
+                    <div style="max-width: 900px; margin: 40px auto; background: var(--parchment); border-radius: 15px; overflow: hidden; border: 3px solid var(--gold); position: relative;">
+                        <div style="position: relative; height: 300px; background-image: url('${article.image}'); background-size: cover; background-position: center;">
+                            <button onclick="closeModal()" style="position: absolute; top: 20px; right: 20px; background: var(--gold); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 1001;">×</button>
+                        </div>
+                        <div style="padding: 40px;">
+                            ${article.content}
+                            <div style="text-align: center; margin-top: 40px;">
+                                <button onclick="closeModal()" style="background: var(--forest-green); color: white; border: none; padding: 12px 30px; border-radius: 25px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease;">Close Article</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modal = document.querySelector('.article-modal');
+            if (modal) {
+                modal.remove();
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Adopt kit function
+        function adoptKit(kitType) {
+            const kitNames = {
+                beginner: "Beginner's Kit",
+                family: "Family Producer Kit",
+                artisan: "Artisan's Dream Kit"
+            };
+            
+            alert(`Thank you for choosing to adopt the ${kitNames[kitType]}! Our team will contact you shortly to complete your adoption process.`);
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Update active nav link
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Smooth scroll
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
 </html>
