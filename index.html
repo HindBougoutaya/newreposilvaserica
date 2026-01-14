@@ -2367,4 +2367,1752 @@
         });
     </script>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva Serica - From Mulberry Leaves to Golden Dreams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wood-dark: #8B4513;
+            --wood-medium: #A0522D;
+            --wood-light: #DEB887;
+            --forest-green: #2E4F2E;
+            --sage-green: #9CAF88;
+            --moss-green: #8A9A5B;
+            --cream: #FDF5E6;
+            --lace: #FFF8F0;
+            --ivory: #FFFFF0;
+            --gold: #D4AF37;
+            --vintage-brown: #5D4037;
+            --antique-white: #FAEBD7;
+            --parchment: #F5F5DC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--vintage-brown);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            background-color: var(--antique-white);
+        }
+
+        /* Vintage Painting Background - Using a public domain vintage painting */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1575224300307-3c7a1b5e302c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.12;
+            z-index: -1;
+        }
+
+        /* Additional vintage paper texture overlay */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%235D4037' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--forest-green);
+        }
+
+        p, li {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(139, 69, 19, 0.9);
+            background-image: linear-gradient(rgba(46, 79, 46, 0.9), rgba(46, 79, 46, 0.85)), url('https://images.unsplash.com/photo-1575224300307-3c7a1b5e302c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--ivory);
+            padding: 20px 0;
+            position: relative;
+            border-bottom: 8px solid var(--wood-medium);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-right: 15px;
+        }
+
+        .logo-text h1 {
+            font-size: 2.2rem;
+            color: var(--ivory);
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .logo-text p {
+            font-size: 1rem;
+            color: var(--sage-green);
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 30px;
+        }
+
+        nav a {
+            color: var(--ivory);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(212, 175, 55, 0.3);
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: rgba(222, 184, 135, 0.85);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--wood-light);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23a0522d' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 25px;
+            color: var(--forest-green);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: var(--wood-dark);
+            font-style: italic;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--forest-green);
+            color: var(--ivory);
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--forest-green);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--forest-green);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+        }
+
+        /* Project Info Section */
+        .project-info {
+            padding: 100px 0;
+            background-color: rgba(255, 255, 240, 0.9);
+            position: relative;
+            border-bottom: 1px solid var(--wood-light);
+        }
+
+        .project-info::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23fdf5e6'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            display: inline-block;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 4px;
+            background-color: var(--wood-medium);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .info-card {
+            background-color: var(--lace);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-left: 6px solid var(--moss-green);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 1px solid var(--wood-light);
+        }
+
+        .info-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .info-card i {
+            font-size: 3rem;
+            color: var(--wood-medium);
+            margin-bottom: 25px;
+        }
+
+        .info-card h3 {
+            font-size: 1.9rem;
+            margin-bottom: 18px;
+            color: var(--forest-green);
+        }
+
+        /* Articles Section */
+        .articles {
+            padding: 100px 0;
+            background-color: rgba(253, 245, 230, 0.9);
+            border-bottom: 1px solid var(--wood-light);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+
+        .article-card {
+            background-color: var(--ivory);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid var(--wood-light);
+            cursor: pointer;
+        }
+
+        .article-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .article-img {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ivory);
+            font-size: 3.5rem;
+        }
+
+        .article-content {
+            padding: 30px;
+        }
+
+        .article-content h3 {
+            font-size: 1.7rem;
+            margin-bottom: 18px;
+            color: var(--forest-green);
+            line-height: 1.3;
+        }
+
+        .article-content p {
+            margin-bottom: 25px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: var(--wood-medium);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid var(--wood-medium);
+            padding-bottom: 5px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--forest-green);
+            border-bottom-color: var(--forest-green);
+        }
+
+        /* Guide Pages */
+        .guide-container {
+            display: none;
+            padding: 80px 0;
+            background-color: rgba(255, 255, 240, 0.95);
+            min-height: 100vh;
+        }
+
+        .guide-container.active {
+            display: block;
+        }
+
+        .guide-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--parchment);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid var(--wood-light);
+            position: relative;
+        }
+
+        .guide-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--wood-medium), var(--forest-green), var(--wood-medium));
+            border-radius: 12px 12px 0 0;
+        }
+
+        .guide-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--wood-light);
+        }
+
+        .guide-header i {
+            font-size: 3.5rem;
+            color: var(--wood-medium);
+            margin-bottom: 25px;
+        }
+
+        .guide-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--forest-green);
+        }
+
+        .guide-header .subtitle {
+            font-size: 1.3rem;
+            color: var(--wood-dark);
+            font-style: italic;
+        }
+
+        .guide-section {
+            margin-bottom: 45px;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            border-left: 4px solid var(--sage-green);
+        }
+
+        .guide-section h2 {
+            font-size: 1.9rem;
+            color: var(--forest-green);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--sage-green);
+        }
+
+        .guide-section h3 {
+            font-size: 1.5rem;
+            color: var(--wood-dark);
+            margin: 25px 0 15px;
+        }
+
+        .guide-section p {
+            margin-bottom: 18px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .guide-section ul, .guide-section ol {
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        .guide-section li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .guide-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .guide-section th {
+            background-color: var(--sage-green);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .guide-section td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--wood-light);
+        }
+
+        .guide-section tr:hover {
+            background-color: rgba(156, 175, 136, 0.1);
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: var(--forest-green);
+            color: var(--ivory);
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--forest-green);
+            margin-top: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .back-button:hover {
+            background-color: transparent;
+            color: var(--forest-green);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Impact Section */
+        .impact {
+            padding: 100px 0;
+            background-color: rgba(46, 79, 46, 0.92);
+            color: var(--ivory);
+            position: relative;
+            border-bottom: 1px solid var(--wood-light);
+        }
+
+        .impact::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23fdf5e6'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: rotate(180deg);
+        }
+
+        .impact .section-title h2 {
+            color: var(--ivory);
+        }
+
+        .impact .section-title h2::after {
+            background-color: var(--gold);
+        }
+
+        .impact-intro {
+            text-align: center;
+            font-size: 1.3rem;
+            max-width: 850px;
+            margin: 0 auto 60px;
+            color: var(--sage-green);
+            line-height: 1.8;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 35px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            padding: 30px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .stat-desc {
+            font-size: 1.3rem;
+            color: var(--ivory);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(139, 69, 19, 0.95);
+            color: var(--ivory);
+            padding: 70px 0 25px;
+            position: relative;
+            border-top: 8px solid var(--wood-medium);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo h3 {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .footer-logo p {
+            margin-bottom: 10px;
+            color: var(--sage-green);
+            line-height: 1.6;
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--sage-green);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after, .footer-contact h4::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--gold);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--ivory);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .footer-contact i {
+            margin-right: 15px;
+            color: var(--gold);
+            width: 25px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            font-size: 1rem;
+            color: var(--sage-green);
+        }
+
+        /* Lace borders */
+        .lace-border-top {
+            position: relative;
+            height: 25px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='25' viewBox='0 0 120 25'%3E%3Cpath d='M0,12.5 Q30,5 60,12.5 T120,12.5' stroke='%239CAF88' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 120px 25px;
+            background-color: transparent;
+        }
+
+        .lace-border-bottom {
+            position: relative;
+            height: 25px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='25' viewBox='0 0 120 25'%3E%3Cpath d='M0,12.5 Q30,20 60,12.5 T120,12.5' stroke='%239CAF88' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 120px 25px;
+            background-color: transparent;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.6rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.4rem;
+            }
+            
+            .guide-content {
+                padding: 35px;
+            }
+            
+            .guide-header h1 {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 25px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav li {
+                margin: 5px 15px;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .info-card, .article-card {
+                padding: 25px;
+            }
+            
+            .guide-content {
+                padding: 25px 20px;
+            }
+            
+            .guide-header h1 {
+                font-size: 2rem;
+            }
+            
+            .guide-section {
+                padding: 20px;
+            }
+            
+            .footer-content {
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 1.9rem;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .info-card h3, .article-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-feather-alt"></i>
+                    <div class="logo-text">
+                        <h1>Silva Serica</h1>
+                        <p>From Mulberry Leaves to Golden Dreams</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#project" class="nav-link">The Project</a></li>
+                        <li><a href="#articles" class="nav-link">Resources</a></li>
+                        <li><a href="#impact" class="nav-link">Impact</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Weaving Sustainability & Community</h2>
+                <p>Helping rural families raise silkworms, plant mulberry trees, and transform natural silk into beautiful garments while fostering connection, dignity, and environmental stewardship.</p>
+                <a href="#project" class="cta-button nav-link">Discover Our Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lace Border -->
+    <div class="lace-border-top"></div>
+
+    <!-- Project Info Section -->
+    <section class="project-info" id="project">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Silva Serica Project</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card" data-guide="mulberry">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Mulberry Trees</h3>
+                    <p>Families plant mulberry trees to feed silkworms, improve air quality, and create a greener environment for future generations.</p>
+                </div>
+                <div class="info-card" data-guide="silkworm">
+                    <i class="fas fa-worm"></i>
+                    <h3>Silkworm Care</h3>
+                    <p>Learning to care for silkworms strengthens our connection with animals and teaches unconditional love and responsibility.</p>
+                </div>
+                <div class="info-card" data-guide="silk">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Silk Processing</h3>
+                    <p>Transforming natural silk into clothing creates income opportunities and promotes sustainable, organic fashion.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Building</h3>
+                    <p>Weekly meetings allow neighbors to share progress, learn skills, and support each other's growth and wellbeing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lace Border -->
+    <div class="lace-border-bottom"></div>
+
+    <!-- Articles Section -->
+    <section class="articles" id="articles">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resources & Knowledge</h2>
+            </div>
+            <div class="articles-grid">
+                <div class="article-card" data-guide="mulberry">
+                    <div class="article-img" style="background-color: var(--forest-green);">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Mulberry Cultivation Guide</h3>
+                        <p>Learn how to plant, grow, and care for mulberry trees to provide sustainable food for your silkworms. Complete guide with seasonal tips and organic methods.</p>
+                        <span class="read-more">Read Guide</span>
+                    </div>
+                </div>
+                <div class="article-card" data-guide="silkworm">
+                    <div class="article-img" style="background-color: var(--wood-medium);">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Silkworm Care & Adoption</h3>
+                        <p>Everything you need to know about raising healthy silkworms, from eggs to cocoon production. Includes feeding schedules and health management.</p>
+                        <span class="read-more">Read Guide</span>
+                    </div>
+                </div>
+                <div class="article-card" data-guide="silk">
+                    <div class="article-img" style="background-color: var(--moss-green);">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Silk Processing Techniques</h3>
+                        <p>Traditional and modern methods for processing silk cocoons into luxurious, usable thread. Includes natural dyeing with local plants.</p>
+                        <span class="read-more">Read Guide</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-img" style="background-color: var(--wood-dark);">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Victorian-Inspired Designs</h3>
+                        <p>Creating modern clothing with Victorian-era elegance, femininity, and grace using natural silk. Patterns and design principles.</p>
+                        <span class="read-more">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Pages -->
+    
+    <!-- Mulberry Cultivation Guide -->
+    <section class="guide-container" id="mulberry-guide">
+        <div class="container">
+            <div class="guide-content">
+                <div class="guide-header">
+                    <i class="fas fa-tree"></i>
+                    <h1>Complete Mulberry Cultivation Guide</h1>
+                    <p class="subtitle">Growing healthy mulberry trees for sustainable silkworm farming</p>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Introduction to Mulberry Trees</h2>
+                    <p>Mulberry trees (Morus spp.) are fast-growing, deciduous trees that produce the essential food for silkworms. They're hardy, drought-resistant once established, and can thrive in various soil conditions. For silkworm cultivation, the white mulberry (Morus alba) is preferred because its leaves are most nutritious for Bombyx mori silkworms.</p>
+                    <p>In our Silva Serica project, each family plants 5-10 mulberry trees, creating both a food source for silkworms and a greener environment for the community. The trees also improve air quality and provide shade.</p>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Planting Guidelines</h2>
+                    
+                    <h3>1. Climate Requirements</h3>
+                    <ul>
+                        <li><strong>Temperature:</strong> Optimal growth between 24-30°C (75-86°F)</li>
+                        <li><strong>Rainfall:</strong> 600-2500 mm annually, but can tolerate drought</li>
+                        <li><strong>Altitude:</strong> Grows well from sea level to 4000 feet</li>
+                        <li><strong>Sunlight:</strong> Full sun (6-8 hours daily) for best leaf production</li>
+                    </ul>
+                    
+                    <h3>2. Soil Preparation</h3>
+                    <ol>
+                        <li>Choose well-drained soil with pH 6.0-7.0</li>
+                        <li>Dig planting holes 60x60x60 cm (2x2x2 feet)</li>
+                        <li>Mix soil with 5-10 kg of well-rotted manure or compost</li>
+                        <li>Space trees 3-4 meters apart for optimal growth</li>
+                        <li>For hedge planting, space 1-2 meters apart</li>
+                    </ol>
+                    
+                    <h3>3. Planting Process</h3>
+                    <ul>
+                        <li>Best planting time: Early spring or start of rainy season</li>
+                        <li>Water thoroughly after planting</li>
+                        <li>Apply mulch around base to retain moisture</li>
+                        <li>Protect young trees from strong winds</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Care and Maintenance</h2>
+                    
+                    <h3>Watering Schedule</h3>
+                    <p><strong>First year:</strong> Water every 3-4 days during dry periods<br>
+                    <strong>Established trees:</strong> Deep watering every 10-14 days in dry season<br>
+                    <strong>Important:</strong> Reduce watering before leaf harvest to increase leaf quality</p>
+                    
+                    <h3>Fertilization</h3>
+                    <ul>
+                        <li><strong>Spring:</strong> Apply balanced fertilizer (NPK 10:10:10)</li>
+                        <li><strong>After each harvest:</strong> Apply nitrogen-rich fertilizer</li>
+                        <li><strong>Annually:</strong> Add compost or manure in early spring</li>
+                        <li><strong>For poor soils:</strong> Add micronutrients (zinc, iron) as needed</li>
+                    </ul>
+                    
+                    <h3>Pruning Techniques</h3>
+                    <ol>
+                        <li><strong>Formative pruning (Year 1-2):</strong> Shape tree for easy harvesting</li>
+                        <li><strong>Maintenance pruning:</strong> Remove dead/diseased branches annually</li>
+                        <li><strong>Harvest pruning:</strong> Cut branches to encourage new growth</li>
+                        <li><strong>Height control:</strong> Keep trees at 2-3 meters for easy leaf collection</li>
+                    </ol>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Harvesting Mulberry Leaves</h2>
+                    
+                    <h3>When to Harvest</h3>
+                    <ul>
+                        <li><strong>First harvest:</strong> 6-8 months after planting</li>
+                        <li><strong>Peak season:</strong> Spring and summer months</li>
+                        <li><strong>Best time of day:</strong> Early morning when leaves are crisp</li>
+                        <li><strong>Frequency:</strong> Every 45-60 days during growing season</li>
+                    </ul>
+                    
+                    <h3>Harvesting Methods</h3>
+                    <ol>
+                        <li><strong>Leaf picking:</strong> Hand-pick mature leaves (for small scale)</li>
+                        <li><strong>Branch cutting:</strong> Cut entire branches (most common method)</li>
+                        <li><strong>Whole tree harvest:</strong> Cut back entire tree (for intensive farming)</li>
+                    </ol>
+                    
+                    <h3>Leaf Storage</h3>
+                    <ul>
+                        <li>Store in cool, shaded area with good air circulation</li>
+                        <li>Use within 24 hours for best nutritional value</li>
+                        <li>For longer storage, refrigerate at 4°C (39°F) for up to 3 days</li>
+                        <li>Never store leaves in plastic bags (causes condensation)</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Pest and Disease Management</h2>
+                    
+                    <h3>Common Pests</h3>
+                    <ul>
+                        <li><strong>Mulberry scale:</strong> Use neem oil spray</li>
+                        <li><strong>Leaf rollers:</strong> Hand-pick or use biological controls</li>
+                        <li><strong>Aphids:</strong> Spray with soapy water solution</li>
+                        <li><strong>Whiteflies:</strong> Yellow sticky traps</li>
+                    </ul>
+                    
+                    <h3>Disease Prevention</h3>
+                    <ol>
+                        <li><strong>Powdery mildew:</strong> Ensure good air circulation</li>
+                        <li><strong>Leaf spot:</strong> Remove affected leaves promptly</li>
+                        <li><strong>Root rot:</strong> Avoid waterlogged soil</li>
+                        <li><strong>Bacterial blight:</strong> Use disease-resistant varieties</li>
+                    </ol>
+                    
+                    <h3>Organic Control Methods</h3>
+                    <p>We recommend organic methods to ensure leaves are safe for silkworms:</p>
+                    <ul>
+                        <li>Companion planting with marigolds or garlic</li>
+                        <li>Regular inspection and manual removal of pests</li>
+                        <li>Maintaining tree health through proper nutrition</li>
+                        <li>Using botanical extracts (neem, garlic, chili)</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Yield Expectations</h2>
+                    <table>
+                        <tr>
+                            <th>Tree Age</th>
+                            <th>Annual Leaf Yield</th>
+                            <th>Silkworms Supported</th>
+                        </tr>
+                        <tr>
+                            <td>Year 1</td>
+                            <td>2-3 kg</td>
+                            <td>500-750 worms</td>
+                        </tr>
+                        <tr>
+                            <td>Year 2</td>
+                            <td>8-12 kg</td>
+                            <td>2,000-3,000 worms</td>
+                        </tr>
+                        <tr>
+                            <td>Year 3+</td>
+                            <td>15-25 kg</td>
+                            <td>4,000-6,000 worms</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Community Planting Tips</h2>
+                    <ul>
+                        <li>Organize group planting days to build community spirit</li>
+                        <li>Create a shared nursery for saplings</li>
+                        <li>Establish a rotation system for leaf harvesting</li>
+                        <li>Share knowledge about pest management</li>
+                        <li>Document growth progress in community meetings</li>
+                    </ul>
+                </div>
+                
+                <button class="back-button" onclick="showHomePage()">Back to Resources</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Silkworm Care Guide -->
+    <section class="guide-container" id="silkworm-guide">
+        <div class="container">
+            <div class="guide-content">
+                <div class="guide-header">
+                    <i class="fas fa-bug"></i>
+                    <h1>Silkworm Care & Adoption Guide</h1>
+                    <p class="subtitle">Raising healthy Bombyx mori silkworms from eggs to cocoons</p>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Introduction to Silkworm Farming</h2>
+                    <p>The silkworm (Bombyx mori) has been domesticated for over 5,000 years. These remarkable creatures transform mulberry leaves into luxurious silk. Raising silkworms teaches patience, responsibility, and respect for nature while providing economic opportunities. This guide covers everything from obtaining eggs to harvesting cocoons.</p>
+                    <p>In the Silva Serica project, each family starts with 100-200 silkworms, learning the basics before potentially scaling up. The process takes about 45 days from egg to cocoon.</p>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Getting Started</h2>
+                    
+                    <h3>Essential Equipment</h3>
+                    <ul>
+                        <li><strong>Rearing trays:</strong> Shallow boxes with ventilation (wood or plastic)</li>
+                        <li><strong>Cleaning tools:</strong> Soft brushes, tweezers, and fine mesh</li>
+                        <li><strong>Thermometer and hygrometer:</strong> For monitoring conditions</li>
+                        <li><strong>Feeding racks:</strong> For organizing mulberry leaves</li>
+                        <li><strong>Mounting structures:</strong> For cocoon spinning (paper cones, twigs)</li>
+                    </ul>
+                    
+                    <h3>Environment Setup</h3>
+                    <ol>
+                        <li>Choose a clean, dry room away from pesticides</li>
+                        <li>Maintain temperature: 24-28°C (75-82°F)</li>
+                        <li>Keep humidity: 70-80% for young worms, 60-70% for mature</li>
+                        <li>Ensure good ventilation without direct drafts</li>
+                        <li>Provide indirect natural light (avoid direct sunlight)</li>
+                    </ol>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Lifecycle Management</h2>
+                    
+                    <h3>Stage 1: Eggs (10-14 days)</h3>
+                    <ul>
+                        <li>Source disease-free eggs from reputable suppliers</li>
+                        <li>Store at 5°C (41°F) until ready to hatch</li>
+                        <li>Incubate at 25°C (77°F) with 80-85% humidity</li>
+                        <li>Eggs will darken to blue-gray before hatching</li>
+                        <li>Disinfect with 2% formaldehyde solution if needed</li>
+                    </ul>
+                    
+                    <h3>Stage 2: Larvae - 5 Instars (25-28 days)</h3>
+                    <p><strong>First Instar (1-3 days):</strong></p>
+                    <ul>
+                        <li>Feed tender young leaves chopped finely</li>
+                        <li>Maintain 28°C (82°F) and 85% humidity</li>
+                        <li>Clean trays daily after worms move to fresh leaves</li>
+                    </ul>
+                    
+                    <p><strong>Second & Third Instar (6-9 days):</strong></p>
+                    <ul>
+                        <li>Feed whole young leaves</li>
+                        <li>Increase space as worms grow</li>
+                        <li>Temperature: 26-27°C (79-81°F)</li>
+                    </ul>
+                    
+                    <p><strong>Fourth & Fifth Instar (15-18 days):</strong></p>
+                    <ul>
+                        <li>Feed mature leaves 3-4 times daily</li>
+                        <li>Worms eat voraciously - ensure constant supply</li>
+                        <li>Clean trays twice daily due to high waste</li>
+                        <li>Temperature: 24-25°C (75-77°F)</li>
+                    </ul>
+                    
+                    <h3>Stage 3: Spinning & Cocoon Formation (3-4 days)</h3>
+                    <ol>
+                        <li>Worms stop eating and seek mounting place</li>
+                        <li>Provide spinning structures (paper cones, twigs)</li>
+                        <li>Maintain 23-24°C (73-75°F) and 65% humidity</li>
+                        <li>Do not disturb during spinning process</li>
+                    </ol>
+                    
+                    <h3>Stage 4: Pupation & Moth Emergence (14-18 days)</h3>
+                    <ul>
+                        <li>Cocoons complete after 3 days of spinning</li>
+                        <li>Harvest cocoons 7-8 days after completion</li>
+                        <li>For breeding: Allow moths to emerge naturally</li>
+                        <li>For silk: Process cocoons before moths emerge</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Feeding Guidelines</h2>
+                    
+                    <h3>Leaf Selection</h3>
+                    <ul>
+                        <li>Use fresh, pesticide-free mulberry leaves</li>
+                        <li>Young worms: Tender leaves from tree top</li>
+                        <li>Mature worms: Mature leaves from middle branches</li>
+                        <li>Avoid wet, dusty, or contaminated leaves</li>
+                        <li>Never use leaves from roadsides (pollution risk)</li>
+                    </ul>
+                    
+                    <h3>Feeding Schedule</h3>
+                    <table>
+                        <tr>
+                            <th>Instar</th>
+                            <th>Feeds/Day</th>
+                            <th>Leaf Amount</th>
+                            <th>Timing</th>
+                        </tr>
+                        <tr>
+                            <td>1st</td>
+                            <td>4-5</td>
+                            <td>1-2 leaves/100 worms</td>
+                            <td>Every 4-5 hours</td>
+                        </tr>
+                        <tr>
+                            <td>2nd-3rd</td>
+                            <td>3-4</td>
+                            <td>Increasing amounts</td>
+                            <td>Every 6 hours</td>
+                        </tr>
+                        <tr>
+                            <td>4th-5th</td>
+                            <td>3-4</td>
+                            <td>Ad libitum (free feeding)</td>
+                            <td>Morning, noon, evening</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Health Management</h2>
+                    
+                    <h3>Common Health Issues</h3>
+                    <ul>
+                        <li><strong>Grasserie (Viral):</strong> Worms become sluggish, turn yellowish. Isolate immediately.</li>
+                        <li><strong>Flacherie (Bacterial):</strong> Diarrhea, slow growth. Improve hygiene.</li>
+                        <li><strong>Muscardine (Fungal):</strong> White growth on dead worms. Control humidity.</li>
+                        <li><strong>Pebrine (Protozoan):</strong> Irregular growth, black spots. Destroy infected stock.</li>
+                    </ul>
+                    
+                    <h3>Prevention Strategies</h3>
+                    <ol>
+                        <li>Maintain strict hygiene - wash hands, disinfect tools</li>
+                        <li>Provide fresh, clean leaves only</li>
+                        <li>Control temperature and humidity precisely</li>
+                        <li>Remove sick/dead worms immediately</li>
+                        <li>Clean trays thoroughly between batches</li>
+                    </ol>
+                    
+                    <h3>Natural Remedies</h3>
+                    <ul>
+                        <li>Add neem leaves to feed for antibacterial properties</li>
+                        <li>Use garlic extract spray for fungal prevention</li>
+                        <li>Place lime powder around rearing area to deter pests</li>
+                        <li>Ensure good air circulation to prevent disease</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Community Adoption Program</h2>
+                    
+                    <h3>Adoption Process</h3>
+                    <ol>
+                        <li><strong>Orientation:</strong> Attend Silva Serica workshop</li>
+                        <li><strong>Starter Kit:</strong> Receive 100 eggs, rearing tray, guide</li>
+                        <li><strong>Training:</strong> Learn basic care in hands-on session</li>
+                        <li><strong>Support:</strong> Weekly check-ins with community mentor</li>
+                        <li><strong>Harvest:</strong> Return cocoons for processing or keep for personal use</li>
+                    </ol>
+                    
+                    <h3>Success Tips for New Families</h3>
+                    <ul>
+                        <li>Start small (100-200 worms) to gain experience</li>
+                        <li>Involve children - teaches responsibility and biology</li>
+                        <li>Keep a simple journal to track growth and issues</li>
+                        <li>Share experiences at weekly community meetings</li>
+                        <li>Celebrate milestones (first cocoon, first harvest)</li>
+                    </ul>
+                    
+                    <h3>Expected Outcomes</h3>
+                    <p>With proper care, 100 healthy silkworms will produce:</p>
+                    <ul>
+                        <li>Approximately 1 kg of fresh cocoons</li>
+                        <li>150-200 grams of raw silk after processing</li>
+                        <li>Enough silk for 1-2 scarves or small garments</li>
+                        <li>Potential income: $20-40 depending on quality</li>
+                        <li>Valuable experience for scaling up next season</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Ethical Considerations</h2>
+                    <ul>
+                        <li>Handle worms gently - they are living creatures</li>
+                        <li>Provide optimal conditions throughout lifecycle</li>
+                        <li>If breeding, ensure moths have space to emerge and mate</li>
+                        <li>For silk production, use humane harvesting methods</li>
+                        <li>Respect the silkworm's contribution to your livelihood</li>
+                    </ul>
+                </div>
+                
+                <button class="back-button" onclick="showHomePage()">Back to Resources</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Silk Processing Guide -->
+    <section class="guide-container" id="silk-guide">
+        <div class="container">
+            <div class="guide-content">
+                <div class="guide-header">
+                    <i class="fas fa-spinner"></i>
+                    <h1>Silk Processing Techniques Guide</h1>
+                    <p class="subtitle">Traditional and modern methods for transforming cocoons into luxurious silk</p>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Introduction to Silk Processing</h2>
+                    <p>Silk processing transforms cocoons into usable thread through a series of steps: harvesting, stifling, reeling, twisting, and dyeing. This guide covers both traditional methods suitable for community production and modern techniques for higher quality. With practice, families can produce silk thread ready for weaving or sale.</p>
+                    <p>The Silva Serica project establishes community processing centers where families can bring their cocoons for collective processing, sharing equipment and knowledge.</p>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Cocoon Harvest & Preparation</h2>
+                    
+                    <h3>When to Harvest</h3>
+                    <ul>
+                        <li>Harvest 7-8 days after cocoon completion</li>
+                        <li>Cocoons should feel firm and dry</li>
+                        <li>For silk: Harvest before moth emerges (pierces cocoon)</li>
+                        <li>For breeding: Leave until moths emerge naturally</li>
+                        <li>Best time: Morning after dew has evaporated</li>
+                    </ul>
+                    
+                    <h3>Sorting and Grading</h3>
+                    <ol>
+                        <li><strong>First grade:</strong> Perfect shape, firm, uniform color</li>
+                        <li><strong>Second grade:</strong> Slightly misshapen but intact</li>
+                        <li><strong>Third grade:</strong> Double cocoons, thin areas</li>
+                        <li><strong>Rejects:</strong> Pierced, damaged, or stained cocoons</li>
+                    </ol>
+                    
+                    <h3>Stifling Methods (Killing the Pupae)</h3>
+                    <p><strong>Sun drying (traditional):</strong></p>
+                    <ul>
+                        <li>Spread cocoons in thin layer in direct sunlight</li>
+                        <li>Turn regularly for 2-3 days</li>
+                        <li>Advantage: No equipment needed</li>
+                        <li>Disadvantage: Weather dependent, can discolor silk</li>
+                    </ul>
+                    
+                    <p><strong>Steam stifling (recommended):</strong></p>
+                    <ul>
+                        <li>Use steamer or large pot with rack</li>
+                        <li>Steam for 15-20 minutes at 100°C (212°F)</li>
+                        <li>Advantage: Preserves silk quality, kills quickly</li>
+                        <li>Disadvantage: Requires careful temperature control</li>
+                    </ul>
+                    
+                    <p><strong>Hot air drying (modern):</strong></p>
+                    <ul>
+                        <li>Use oven at 90-100°C (194-212°F) for 1-2 hours</li>
+                        <li>Advantage: Consistent results</li>
+                        <li>Disadvantage: Equipment cost</li>
+                    </ul>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Traditional Reeling Methods</h2>
+                    
+                    <h3>Basic Hand Reeling Setup</h3>
+                    <ul>
+                        <li><strong>Basin:</strong> Large pot or basin for hot water</li>
+                        <li><strong>Brush:</strong> Soft bristle brush to find filament ends</li>
+                        <li><strong>Reel:</strong> Simple hand-cranked reel or rotating frame</li>
+                        <li><strong>Heat source:</strong> Stove or fire to maintain water at 80-85°C (176-185°F)</li>
+                        <li><strong>Guidance system:</strong> Porcelain eyelets or smooth guides</li>
+                    </ul>
+                    
+                    <h3>Step-by-Step Reeling Process</h3>
+                    <ol>
+                        <li><strong>Softening:</strong> Soak cocoons in hot water (80°C/176°F) for 10-15 minutes</li>
+                        <li><strong>Brushing:</strong> Gently brush cocoon surface to find filament end</li>
+                        <li><strong>Threading:</strong> Attach 5-10 filament ends together (for strength)</li>
+                        <li><strong>Reeling:</strong> Wind combined filaments onto reel slowly and evenly</li>
+                        <li><strong>Joining:</strong> As cocoons finish, add new ones to maintain continuity</li>
+                        <li><strong>Drying:</strong> Allow reeled silk to dry on reel before removal</li>
+                    </ol>
+                    
+                    <h3>Common Issues & Solutions</h3>
+                    <table>
+                        <tr>
+                            <th>Problem</th>
+                            <th>Cause</th>
+                            <th>Solution</th>
+                        </tr>
+                        <tr>
+                            <td>Breakages</td>
+                            <td>Water too hot, rough handling</td>
+                            <td>Lower temperature, handle gently</td>
+                        </tr>
+                        <tr>
+                            <td>Uneven thread</td>
+                            <td>Inconsistent reeling speed</td>
+                            <td>Maintain steady pace, use guides</td>
+                        </tr>
+                        <tr>
+                            <td>Sticky silk</td>
+                            <td>Sericin not properly softened</td>
+                            <td>Increase soaking time/temperature</td>
+                        </tr>
+                        <tr>
+                            <td>Weak thread</td>
+                            <td>Too few filaments combined</td>
+                            <td>Use 8-10 filaments for strength</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Twisting and Plying</h2>
+                    
+                    <h3>Why Twist Silk Thread?</h3>
+                    <ul>
+                        <li>Increases strength and durability</li>
+                        <li>Creates different textures (crepe, tram, organzine)</li>
+                        <li>Prevents unraveling during weaving</li>
+                        <li>Allows blending with other fibers</li>
+                    </ul>
+                    
+                    <h3>Traditional Twisting Methods</h3>
+                    <p><strong>Hand spindle:</strong></p>
+                    <ul>
+                        <li>Simple wooden spindle with weight</li>
+                        <li>Spin while feeding thread from reel</li>
+                        <li>Creates Z-twist (right-handed) or S-twist (left-handed)</li>
+                        <li>Portable - can be done anywhere</li>
+                    </ul>
+                    
+                    <p><strong>Spinning wheel:</strong></p>
+                    <ul>
+                        <li>Foot-powered or hand-cranked wheel</li>
+                        <li>More consistent twist than spindle</li>
+                        <li>Faster production rate</li>
+                        <li>Can ply multiple threads together</li>
+                    </ul>
+                    
+                    <h3>Plying Techniques</h3>
+                    <ol>
+                        <li><strong>Singles:</strong> Single twisted strand - for weft threads</li>
+                        <li><strong>2-ply:</strong> Two singles twisted together - balanced, strong</li>
+                        <li><strong>3-ply:</strong> Three singles - very strong for warp threads</li>
+                        <li><strong>Cable:</strong> Ply already plied threads - for heavy fabrics</li>
+                    </ol>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Natural Dyeing Techniques</h2>
+                    
+                    <h3>Mordanting (Preparing Silk for Dye)</h3>
+                    <ul>
+                        <li><strong>Alum:</strong> Most common, produces bright colors</li>
+                        <li><strong>Iron:</strong> Darkens colors, creates gray/black tones</li>
+                        <li><strong>Tin:</strong> Brightens colors, especially reds/yellows</li>
+                        <li><strong>Copper:</strong> Creates greenish tones</li>
+                    </ul>
+                    
+                    <h3>Local Natural Dye Sources</h3>
+                    <table>
+                        <tr>
+                            <th>Color</th>
+                            <th>Plant Source</th>
+                            <th>Part Used</th>
+                            <th>Mordant</th>
+                        </tr>
+                        <tr>
+                            <td>Yellow/Gold</td>
+                            <td>Turmeric, onion skins</td>
+                            <td>Root, skins</td>
+                            <td>Alum</td>
+                        </tr>
+                        <tr>
+                            <td>Red/Pink</td>
+                            <td>Madder root, pomegranate</td>
+                            <td>Root, rind</td>
+                            <td>Alum or tin</td>
+                        </tr>
+                        <tr>
+                            <td>Blue</td>
+                            <td>Indigo, woad</td>
+                            <td>Leaves</td>
+                            <td>None needed</td>
+                        </tr>
+                        <tr>
+                            <td>Brown</td>
+                            <td>Walnut hulls, tea</td>
+                            <td>Hulls, leaves</td>
+                            <td>Iron</td>
+                        </tr>
+                        <tr>
+                            <td>Green</td>
+                            <td>Nettle, spinach</td>
+                            <td>Leaves</td>
+                            <td>Copper</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Basic Dyeing Process</h3>
+                    <ol>
+                        <li>Prepare dye bath by simmering plant material 1-2 hours</li>
+                        <li>Strain to remove plant material</li>
+                        <li>Add pre-mordanted, wet silk to dye bath</li>
+                        <li>Simmer gently (don't boil) for 30-60 minutes</li>
+                        <li>Remove silk, rinse in cool water until water runs clear</li>
+                        <li>Hang to dry in shade (sunlight fades natural dyes)</li>
+                    </ol>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Community Processing Center</h2>
+                    
+                    <h3>Shared Equipment Setup</h3>
+                    <ul>
+                        <li>Central location accessible to all families</li>
+                        <li>Large steam sterilizer for cocoon processing</li>
+                        <li>Multiple reeling stations with hot water supply</li>
+                        <li>Dyeing area with ventilation and water access</li>
+                        <li>Drying racks and storage for finished thread</li>
+                    </ul>
+                    
+                    <h3>Quality Standards</h3>
+                    <p>To ensure Silva Serica silk meets market standards:</p>
+                    <ul>
+                        <li><strong>Thread count:</strong> Consistent thickness (20-30 denier)</li>
+                        <li><strong>Strength:</strong> Minimum 3.5 grams/denier</li>
+                        <li><strong>Evenness:</strong> Less than 10% variation in thickness</li>
+                        <li><strong>Color:</strong> Even dye penetration, colorfastness</li>
+                        <li><strong>Packaging:</strong> Clean, organized skeins or cones</li>
+                    </ul>
+                    
+                    <h3>Economic Benefits</h3>
+                    <table>
+                        <tr>
+                            <th>Product</th>
+                            <th>Input (Cocoons)</th>
+                            <th>Output</th>
+                            <th>Market Value</th>
+                        </tr>
+                        <tr>
+                            <td>Raw Silk</td>
+                            <td>6-8 kg fresh cocoons</td>
+                            <td>1 kg raw silk</td>
+                            <td>$50-80</td>
+                        </tr>
+                        <tr>
+                            <td>Dyed Silk</td>
+                            <td>1 kg raw silk</td>
+                            <td>1 kg dyed silk</td>
+                            <td>$80-120</td>
+                        </tr>
+                        <tr>
+                            <td>Handwoven Fabric</td>
+                            <td>200g silk thread</td>
+                            <td>1m² fabric</td>
+                            <td>$40-60</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="guide-section">
+                    <h2>Safety and Sustainability</h2>
+                    <ul>
+                        <li>Always work in well-ventilated areas when dyeing</li>
+                        <li>Use protective gloves when handling mordants</li>
+                        <li>Dispose of dye wastewater responsibly (not in streams)</li>
+                        <li>Reuse water where possible (rinse water for initial soaking)</li>
+                        <li>Compost spent plant materials from dyeing</li>
+                        <li>Share knowledge within community to reduce waste</li>
+                    </ul>
+                </div>
+                
+                <button class="back-button" onclick="showHomePage()">Back to Resources</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Projected Impact</h2>
+            </div>
+            <p class="impact-intro">By December 2026, Silva Serica aims to create tangible, sustainable change in rural communities through measurable goals that align with UN Sustainable Development Goal 11: Sustainable Cities and Communities</p>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500</div>
+                    <div class="stat-desc">Mulberry Trees Planted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7500</div>
+                    <div class="stat-desc">Lives Positively Impacted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-desc">Silkworm Survival Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">75%</div>
+                    <div class="stat-desc">Households Earning Income</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1.5M</div>
+                    <div class="stat-desc">MAD GDP Contribution</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-desc">Improved Well-being</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Silva Serica</h3>
+                    <p>A Millennium Fellowship Project by Hind Bougoutaya</p>
+                    <p>University Mohammed VI Polytechnic</p>
+                    <p>Round 1 ID: 68f03e172d7ca7a6c8039cb2</p>
+                    <p>Sustainable Development Goal 11: Sustainable Cities and Communities</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#project" class="nav-link">The Project</a></li>
+                        <li><a href="#articles" class="nav-link">Resources</a></li>
+                        <li><a href="#impact" class="nav-link">Impact</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> hindbougoutaya@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +212 645-792251</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tamesna, Morocco</p>
+                    <p><i class="fas fa-university"></i> Millennium Fellow 2026</p>
+                    <p><i class="fas fa-globe"></i> UNAI 9: Sustainability</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Silva Serica. All Rights Reserved. | "From Mulberry Leaves to Golden Dreams: A Student's Vision Changes Lives"</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show home page (main content)
+        function showHomePage() {
+            document.querySelectorAll('.guide-container').forEach(guide => {
+                guide.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.project-info, .articles, .impact, .hero').forEach(section => {
+                section.style.display = 'block';
+            });
+            
+            document.querySelector('header').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Show guide page
+        function showGuide(guideId) {
+            // Hide main sections
+            document.querySelectorAll('.project-info, .articles, .impact, .hero').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Hide header and footer
+            document.querySelector('header').style.display = 'none';
+            document.querySelector('footer').style.display = 'none';
+            
+            // Hide all guides
+            document.querySelectorAll('.guide-container').forEach(guide => {
+                guide.classList.remove('active');
+            });
+            
+            // Show selected guide
+            document.getElementById(guideId + '-guide').classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Event listeners for guide cards
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click events to guide cards
+            document.querySelectorAll('[data-guide]').forEach(card => {
+                card.addEventListener('click', function() {
+                    const guideType = this.getAttribute('data-guide');
+                    if (guideType) {
+                        showGuide(guideType);
+                    }
+                });
+            });
+            
+            // Add click events to navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    // If we're on a guide page, go back to home first
+                    const activeGuide = document.querySelector('.guide-container.active');
+                    if (activeGuide) {
+                        showHomePage();
+                        // Wait a moment then scroll to target
+                        setTimeout(() => {
+                            const targetElement = document.querySelector(targetId);
+                            if(targetElement) {
+                                window.scrollTo({
+                                    top: targetElement.offsetTop - 80,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }, 300);
+                    } else {
+                        // Regular smooth scrolling
+                        const targetElement = document.querySelector(targetId);
+                        if(targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Add scroll effect to header
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (header && header.style.display !== 'none') {
+                    if (window.scrollY > 100) {
+                        header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                    } else {
+                        header.style.boxShadow = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
 </html>
